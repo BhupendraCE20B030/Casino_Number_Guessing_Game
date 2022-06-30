@@ -6,8 +6,8 @@ void rules()
 {
     system("cls");
     cout << "\t\t******CASINO NUMBER GUESSING RULES!******" << endl;
-    cout << "\t1. Choose a number between 1 to 10\n";
-    cout << "\t2. Winner gets 10 times of the money bet\n";
+    cout << "\t1. Choose a number between 1 - 10\n";
+    cout << "\t2. Winner gets 5 times of the money bet\n";
     cout << "\t3. Wrong bet, and you lose the amount you bet\n\n";
 }
 int main()
@@ -42,13 +42,13 @@ int main()
             cout << "Guess any betting number between 1 & 10 :";
             cin >> guess;
             if (guess <= 0 || guess > 10)
-                cout << "\nNumber should be between 1 to 10\n"
+                cout << "\nNumber should be between 1 - 10\n"
                      << "Re-enter number:\n ";
         } while (guess <= 0 || guess > 10);
         dice = rand()%10 +1;
         if(dice==guess){
-                       cout << "\n\nYou are in luck!! You have won Rs." << betting_amount * 10;
-            balance = balance + betting_amount * 10; 
+                       cout << "\n\nYou are in luck!! You have won Rs." << betting_amount * 5;
+            balance = balance + betting_amount * 5; 
         }
         else
         {
